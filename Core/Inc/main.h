@@ -57,26 +57,12 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define OUT_INJ_EN_Pin GPIO_PIN_0
-#define OUT_INJ_EN_GPIO_Port GPIOF
-#define IN_INJ_EN_Pin GPIO_PIN_1
-#define IN_INJ_EN_GPIO_Port GPIOF
-#define IN_INJ_1_Pin GPIO_PIN_0
-#define IN_INJ_1_GPIO_Port GPIOA
-#define IN_INJ_2_Pin GPIO_PIN_1
-#define IN_INJ_2_GPIO_Port GPIOA
-#define OUT_INJ_1_Pin GPIO_PIN_4
-#define OUT_INJ_1_GPIO_Port GPIOA
-#define OUT_INJ_2_Pin GPIO_PIN_5
-#define OUT_INJ_2_GPIO_Port GPIOA
-#define OUT_INJ_3_Pin GPIO_PIN_6
-#define OUT_INJ_3_GPIO_Port GPIOA
-#define OUT_INJ_4_Pin GPIO_PIN_7
-#define OUT_INJ_4_GPIO_Port GPIOA
-#define IN_INJ_4_Pin GPIO_PIN_1
-#define IN_INJ_4_GPIO_Port GPIOB
-#define IN_INJ_3_Pin GPIO_PIN_11
-#define IN_INJ_3_GPIO_Port GPIOA
+#define CAN_LBK_Pin GPIO_PIN_15
+#define CAN_LBK_GPIO_Port GPIOA
+#define SPI1_NSS_ADC_Pin GPIO_PIN_6
+#define SPI1_NSS_ADC_GPIO_Port GPIOB
+#define ADC_NRST_Pin GPIO_PIN_7
+#define ADC_NRST_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
