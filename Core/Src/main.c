@@ -489,11 +489,11 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, OUT_RSVD1_Pin|OUT_RSVD2_Pin|OUT_RSVD3_Pin|OUT_RSVD4_Pin
-                          |OUT_INJ_NEN_Pin|SPI1_NSS_ADC_Pin|ADC_NRST_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, OUT_RSVD1_Pin|OUT_RSVD3_Pin|OUT_RSVD4_Pin|OUT_RSVD2_Pin
+                          |SPI1_NSS_ADC_Pin|ADC_NRST_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(CAN_LBK_GPIO_Port, CAN_LBK_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, OUT_INJ_EN_Pin|CAN_LBK_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : IN_INJ_1_Pin IN_INJ_2_Pin IN_INJ_3_Pin IN_INJ_4_Pin */
   GPIO_InitStruct.Pin = IN_INJ_1_Pin|IN_INJ_2_Pin|IN_INJ_3_Pin|IN_INJ_4_Pin;
@@ -501,27 +501,27 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : OUT_RSVD1_Pin OUT_RSVD2_Pin OUT_RSVD3_Pin OUT_RSVD4_Pin
-                           OUT_INJ_NEN_Pin SPI1_NSS_ADC_Pin ADC_NRST_Pin */
-  GPIO_InitStruct.Pin = OUT_RSVD1_Pin|OUT_RSVD2_Pin|OUT_RSVD3_Pin|OUT_RSVD4_Pin
-                          |OUT_INJ_NEN_Pin|SPI1_NSS_ADC_Pin|ADC_NRST_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : IN_INJ_EN_Pin IN_RSVD1_Pin IN_RSVD2_Pin */
-  GPIO_InitStruct.Pin = IN_INJ_EN_Pin|IN_RSVD1_Pin|IN_RSVD2_Pin;
+  /*Configure GPIO pins : IN_RSVD2_Pin IN_RSVD1_Pin IN_INJ_EN_Pin */
+  GPIO_InitStruct.Pin = IN_RSVD2_Pin|IN_RSVD1_Pin|IN_INJ_EN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : CAN_LBK_Pin */
-  GPIO_InitStruct.Pin = CAN_LBK_Pin;
+  /*Configure GPIO pins : OUT_RSVD1_Pin OUT_RSVD3_Pin OUT_RSVD4_Pin OUT_RSVD2_Pin
+                           SPI1_NSS_ADC_Pin ADC_NRST_Pin */
+  GPIO_InitStruct.Pin = OUT_RSVD1_Pin|OUT_RSVD3_Pin|OUT_RSVD4_Pin|OUT_RSVD2_Pin
+                          |SPI1_NSS_ADC_Pin|ADC_NRST_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(CAN_LBK_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : OUT_INJ_EN_Pin CAN_LBK_Pin */
+  GPIO_InitStruct.Pin = OUT_INJ_EN_Pin|CAN_LBK_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 }
 

@@ -75,28 +75,28 @@ void Error_Handler(void);
 #define IN_INJ_3_GPIO_Port GPIOA
 #define IN_INJ_4_Pin GPIO_PIN_7
 #define IN_INJ_4_GPIO_Port GPIOA
-#define OUT_RSVD1_Pin GPIO_PIN_10
-#define OUT_RSVD1_GPIO_Port GPIOB
-#define OUT_RSVD2_Pin GPIO_PIN_11
-#define OUT_RSVD2_GPIO_Port GPIOB
-#define OUT_RSVD3_Pin GPIO_PIN_12
-#define OUT_RSVD3_GPIO_Port GPIOB
-#define OUT_RSVD4_Pin GPIO_PIN_13
-#define OUT_RSVD4_GPIO_Port GPIOB
-#define OUT_INJ_NEN_Pin GPIO_PIN_14
-#define OUT_INJ_NEN_GPIO_Port GPIOB
-#define IN_INJ_EN_Pin GPIO_PIN_15
+#define IN_RSVD2_Pin GPIO_PIN_1
+#define IN_RSVD2_GPIO_Port GPIOB
+#define IN_RSVD1_Pin GPIO_PIN_10
+#define IN_RSVD1_GPIO_Port GPIOB
+#define IN_INJ_EN_Pin GPIO_PIN_11
 #define IN_INJ_EN_GPIO_Port GPIOB
+#define OUT_RSVD1_Pin GPIO_PIN_12
+#define OUT_RSVD1_GPIO_Port GPIOB
+#define OUT_RSVD3_Pin GPIO_PIN_13
+#define OUT_RSVD3_GPIO_Port GPIOB
+#define OUT_RSVD4_Pin GPIO_PIN_14
+#define OUT_RSVD4_GPIO_Port GPIOB
+#define OUT_RSVD2_Pin GPIO_PIN_15
+#define OUT_RSVD2_GPIO_Port GPIOB
+#define OUT_INJ_EN_Pin GPIO_PIN_8
+#define OUT_INJ_EN_GPIO_Port GPIOA
 #define CAN_LBK_Pin GPIO_PIN_15
 #define CAN_LBK_GPIO_Port GPIOA
 #define SPI1_NSS_ADC_Pin GPIO_PIN_6
 #define SPI1_NSS_ADC_GPIO_Port GPIOB
 #define ADC_NRST_Pin GPIO_PIN_7
 #define ADC_NRST_GPIO_Port GPIOB
-#define IN_RSVD1_Pin GPIO_PIN_8
-#define IN_RSVD1_GPIO_Port GPIOB
-#define IN_RSVD2_Pin GPIO_PIN_9
-#define IN_RSVD2_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
